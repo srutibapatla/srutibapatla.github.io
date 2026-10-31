@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precise Spice | Sruti Bapatla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="index.html">Sruti Bapatla</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="volunteering.html">Volunteering</a></li>
+    </ul>
+  </nav>
+
+  <main class="post">
+    <a class="back-link" href="projects.html#featured">&larr; Back to projects</a>
+
+    <header class="post-header">
+      <p class="post-kicker">Featured Project · Product Design, Fall 2025</p>
+      <h1>Precise Spice</h1>
+      <p class="post-subtitle">A spice container with an integrated measuring system</p>
+      <p class="meta">Carnegie Mellon University · September – December 2025 · Team of five</p>
+      <ul class="skills"><li>SolidWorks</li><li>Mechanism Design</li><li>Tolerancing</li><li>Prototyping</li></ul>
+      <a class="poster-link" href="posters/precisespiceposter.pdf" target="_blank" rel="noopener">View poster &rarr;</a>
+    </header>
+
+    <img class="post-hero contain" src="images/spice/hero.jpg" alt="Precise Spice final CAD">
+
+    <p class="post-callout"><strong>My role:</strong> I designed the mechanism that drives each dispense, from the thumb dial and lead screw that set the amount to the slider and belt-and-pulley drive that turn the measuring drum. I also toleranced the assembly so all of it fits in a container the size of a standard spice jar. I was also the team's prototype production lead.</p>
+
+    <!-- ===== Overview ===== -->
+    <section class="post-section">
+      <h2>Overview</h2>
+      <p>Measuring spoons often go unused in the kitchen: they add dishes, and larger spoons don't fit inside spice jars. Precise Spice lets you set and dispense an exact amount straight from the jar in two steps. Turn a dial to choose the amount, then press a slider tab to dispense it.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">1.8″ × 3.2″ × 4″</span><span class="stat-label">Same footprint as a standard spice jar</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Increments, ¼ tsp to 1 tbsp</span></div>
+        <div class="stat"><span class="stat-num">7.09 in³</span><span class="stat-label">Refillable spice storage</span></div>
+        <div class="stat"><span class="stat-num">1 motion</span><span class="stat-label">Every amount dispenses in about the same time</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section class="post-section">
+      <h2>Research</h2>
+      <p>We shadowed three home cooks, surveyed about 20 people, and ran a use study with the main competitor. Participants owned around 40 spices on average, yet none measured while cooking. Survey respondents did measure when baking, and pointed to dishes, mess, and spoons that don't fit in jars as the reasons they skip it.</p>
+      <p>The only mass-market competitor, KitchenArt's Select-A-Spice, dispenses just ¼ tsp at a time: a tablespoon means twelve turns of a knob. Users found it unintuitive and doubted its accuracy.</p>
+      <div class="post-grid">
+        <figure><img src="images/spice/research-cabinet.jpg" alt="Spice cabinet from the in-home study"><figcaption>In-home study: spice cabinet</figcaption></figure>
+        <figure><img src="images/spice/research-drawer.jpg" alt="Spice drawer from the in-home study"><figcaption>In-home study: spice drawer</figcaption></figure>
+        <figure><img src="images/spice/competitor.jpg" alt="KitchenArt Select-A-Spice carousel"><figcaption>Competitor: Select-A-Spice</figcaption></figure>
+      </div>
+      <p>That defined our targets:</p>
+      <ul class="post-list">
+        <li>Intuitive to use without instructions</li>
+        <li>Multiple increments, ¼ tsp to 1 tbsp, in a single operation</li>
+        <li>Fits the drawers, cabinets and racks people already use for spices</li>
+        <li>Airtight, so spices stay fresh</li>
+      </ul>
+    </section>
+
+    <!-- ===== Concepts ===== -->
+    <section class="post-section">
+      <h2>Five Concepts</h2>
+      <p>We sketched five measuring mechanisms, each able to dispense every target increment, and scored them in a Pugh chart against a standard measuring spoon.</p>
+      <div class="post-grid">
+        <figure><img src="images/spice/sketch-rack.jpg" alt="Rack and pinion concept sketch"><figcaption>Rack &amp; pinion</figcaption></figure>
+        <figure><img src="images/spice/sketch-spinner.jpg" alt="Spinner concept sketch"><figcaption>Spinner</figcaption></figure>
+        <figure><img src="images/spice/sketch-slicer.jpg" alt="Slicer concept sketch"><figcaption>Slicer</figcaption></figure>
+        <figure><img src="images/spice/sketch-trough.jpg" alt="Adjustable trough concept sketch"><figcaption>Adjustable trough</figcaption></figure>
+        <figure><img src="images/spice/sketch-rings.jpg" alt="Collapsible rings concept sketch"><figcaption>Collapsible rings</figcaption></figure>
+      </div>
+      <figure class="post-figure">
+        <img src="images/spice/pugh.jpg" alt="Pugh chart of the five concepts">
+        <figcaption>Pugh chart: the rack and pinion scored highest, +12 over the baseline</figcaption>
+      </figure>
+      <p>The winning idea counts out fixed ¼ tsp portions rather than resizing one measuring chamber. Since a tablespoon is twelve times a quarter teaspoon, a chamber that grows to fit it would have added bulk. Counting portions kept the container small, which set up the core challenge of my part: a mechanism that can count anywhere from 1 to 12 portions in one push, inside a jar-sized body.</p>
+    </section>
+
+    <!-- ===== Mechanism ===== -->
+    <section class="post-section">
+      <h2>The Dispensing Mechanism</h2>
+      <p>In the final design, the rack became a belt-and-pulley drive paired with a lead screw that sets its travel:</p>
+      <div class="post-split">
+        <ol class="post-list">
+          <li><strong>Set:</strong> the user turns a knurled dial at the base with their thumb. It rotates a lead screw, which moves a stop, marked with an indicator, up or down to the chosen increment.</li>
+          <li><strong>Dispense:</strong> the user presses the slider tab down until it meets the stop. The belt converts that straight-line travel into rotation of a pulley on the drum's axle.</li>
+          <li><strong>Measure:</strong> the drum has eight ¼ tsp partitions. Each partition that rotates past the opening drops exactly one portion.</li>
+        </ol>
+        <figure class="post-figure">
+          <img src="images/spice/mech-leadscrew.jpg" alt="Lead screw with adjustable stop and thumb dial">
+          <figcaption>Thumb dial, lead screw and adjustable stop</figcaption>
+        </figure>
+      </div>
+      <figure class="post-figure">
+        <img src="images/spice/mech-belt.jpg" alt="Belt and pulley drive connected to the segmented drum">
+        <figcaption>Slider, belt and pulley turning the segmented drum</figcaption>
+      </figure>
+      <h3>Sizing the drive</h3>
+      <p>A tablespoon is 12 partitions, or 1.5 drum rotations. That set the slider travel and the belt length:</p>
+      <div class="calc">
+        <div><span>Pulley diameter</span><strong>d<sub>p</sub> = 0.382 in</strong></div>
+        <div><span>Slider travel for 1 tbsp</span><strong>Δs = 1.5πd<sub>p</sub> = 1.8 in</strong></div>
+        <div><span>Minimum belt length</span><strong>l<sub>b</sub> = 2Δs + πd<sub>p</sub> = 4.8 in</strong></div>
+      </div>
+      <p>Because every increment uses the same press, just with a different stop height, a tablespoon takes about as long as a quarter teaspoon. That fixes the competitor's twelve-turn problem.</p>
+    </section>
+
+    <!-- ===== Form factor & tolerancing ===== -->
+    <section class="post-section">
+      <h2>A Tight Form Factor</h2>
+      <p>The container had to sit on an existing spice rack, so the whole mechanism had to fit in a 1.8″ × 3.2″ × 4″ body alongside 7.09 in³ of spice. I packaged the lead screw and belt as a slim vertical column beside the hopper, with the pulley sitting directly on the drum's axle. That way the drive adds almost no width.</p>
+      <figure class="post-figure">
+        <img src="images/spice/lineup.jpg" alt="Precise Spice lined up with standard store-bought spice jars">
+        <figcaption>Sized to sit alongside the spice jars people already own</figcaption>
+      </figure>
+      <h3>Shrinking it, iteration by iteration</h3>
+      <p>Getting there took multiple prototypes. Each one significantly decreased the form factor: from an early rack-and-pinion proof of concept, to a belt-and-pulley prototype, to the final compact design.</p>
+      <figure class="post-figure">
+        <img src="images/spice/prototypes.jpg" alt="Three Precise Spice prototypes side by side, getting smaller from left to right">
+        <figcaption>Prototype iterations, left to right: rack-and-pinion proof of concept, belt-and-pulley prototype, final prototype</figcaption>
+      </figure>
+      <div class="post-split">
+        <div>
+          <h3>Well toleranced</h3>
+          <p>With so little room, there was no slack to hide sloppy fits. I toleranced each interface so parts move freely without rattling, binding or leaking spice:</p>
+          <ul class="post-list">
+            <li>The drum within its housing, so partitions hold an accurate ¼ tsp and spice can't slip past</li>
+            <li>The slider in its track, for a smooth press with no wobble</li>
+            <li>The stop on the lead screw, so each increment lands in the same place every time</li>
+            <li>Pulley center distance against belt length, so the belt stays tensioned without slipping</li>
+          </ul>
+        </div>
+        <figure class="post-figure">
+          <img src="images/spice/final-section.jpg" alt="Side view showing the mechanism packaged beside the hopper">
+          <figcaption>Side view: hopper, drum and drive packed into the body</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Drum & hopper ===== -->
+    <section class="post-section">
+      <h2>Drum &amp; Hopper</h2>
+      <p>A refillable sheet-metal hopper funnels spice into the segmented drum. We sized the drum so each of its eight partitions holds exactly ¼ tsp (0.0752 in³), which gives an outer diameter of 1.014 in.</p>
+      <div class="post-grid two">
+        <figure><img src="images/spice/drum-schematic.jpg" alt="Drum schematic"><figcaption>Drum schematic</figcaption></figure>
+        <figure><img src="images/spice/drum-3d.jpg" alt="Segmented drum wireframe"><figcaption>Segmented drum</figcaption></figure>
+        <figure><img src="images/spice/hopper-flat.jpg" alt="Flat pattern of the sheet-metal hopper"><figcaption>Hopper flat pattern</figcaption></figure>
+        <figure><img src="images/spice/hopper-3d.jpg" alt="Folded sheet-metal hopper"><figcaption>Folded hopper</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== Final design ===== -->
+    <section class="post-section">
+      <h2>Final Design</h2>
+      <div class="post-grid">
+        <figure><img src="images/spice/final-closed.jpg" alt="Final design with lid closed"><figcaption>Assembled</figcaption></figure>
+        <figure><img src="images/spice/final-open.jpg" alt="Final design with lid off showing the hopper"><figcaption>Lid off: hopper and slider</figcaption></figure>
+        <figure><img src="images/spice/final-exploded.jpg" alt="Final design with housing lifted"><figcaption>Housing lifted</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== Future work ===== -->
+    <section class="post-section">
+      <h2>Future Work</h2>
+      <ul class="post-list">
+        <li>Test production methods such as sheet-metal bending and injection molding</li>
+        <li>Improve the airtight seal</li>
+        <li>Add a sprinkle-and-pour lid</li>
+        <li>Shrink the footprint further relative to capacity</li>
+      </ul>
+    </section>
+
+    <a class="back-link" href="projects.html#featured">&larr; Back to projects</a>
+  </main>
+
+  <footer>© 2026 Sruti Bapatla</footer>
+</body>
+</html>

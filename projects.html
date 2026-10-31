@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Sruti Bapatla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="index.html">Sruti Bapatla</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="volunteering.html">Volunteering</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Projects</h1>
+
+    <div class="filter-bar">
+      <label for="project-filter">Category:</label>
+      <select id="project-filter">
+        <option value="featured">Featured</option>
+        <option value="professional">Professional</option>
+        <option value="academic">Academic</option>
+        <option value="fun-fabrication">Fun Fabrication</option>
+      </select>
+    </div>
+
+    <!--
+      EDIT each project card:
+        - img src: swap images/placeholder.svg for your picture
+        - .overlay: the description shown on hover
+        - .skills: one <li> per skill
+    -->
+
+    <!-- ===== Featured (click through to a design write-up) ===== -->
+    <section class="project-group" id="featured">
+      <div class="project-grid featured-grid">
+
+        <article class="project-card">
+          <a class="card-link" href="neocis.html">
+            <div class="project-cover">
+              <img src="images/yomi.jpg" alt="Neocis Yomi robotic dental surgery system">
+              <div class="cover-title">Neocis</div>
+              <div class="overlay"><p>Redesigned oral fiducials to accommodate an oxygen mask, balancing DFMA and aesthetics, and created and tested fixtures to precisely place beads in pockets.</p></div>
+            </div>
+            <h3>Neocis: Surgical Instruments Intern</h3>
+          </a>
+          <p class="meta">Miami, FL · June – August 2025</p>
+          <ul class="skills"><li>SolidWorks</li><li>3D Printing</li><li>DFMA</li><li>Human Factors</li><li>Human-Centered Design</li><li>User Testing</li><li>Injection Molding</li></ul>
+          <a class="poster-link" href="neocis.html">Read the design story (password required) &rarr;</a>
+        </article>
+
+        <article class="project-card">
+          <a class="card-link" href="precise-spice.html">
+            <div class="project-cover">
+              <img src="images/precisespicecover.jpg" alt="Spice container">
+              <div class="cover-title">Spice Container</div>
+              <div class="overlay"><p>A spice-jar-sized container that measures and dispenses ¼ tsp to 1 tbsp in one press. I designed the lead-screw and belt-and-pulley dispensing mechanism and toleranced it to fit the tight form factor.</p></div>
+            </div>
+            <h3>Spice Container with Integrated Measuring System</h3>
+          </a>
+          <p class="meta">September – December 2025</p>
+          <ul class="skills"><li>SolidWorks</li><li>Mechanism Design</li><li>Tolerancing</li><li>Prototyping</li></ul>
+          <a class="poster-link" href="precise-spice.html">Read the design story &rarr;</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Professional ===== -->
+    <section class="project-group" id="professional">
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/palau-recruitment.gif" alt="Animated Power BI recruitment metrics dashboard">
+            <div class="cover-title">Republic of Palau</div>
+            <div class="overlay"><p>For Palau's Ministry of Human Resources, I built dynamic, interactive Power BI dashboards that automate HR reporting, plus data entry and organizational systems in Microsoft Access, while adapting my work to a new cultural context.</p></div>
+          </div>
+          <h3>Republic of Palau: Tech Consulting in Global Community Intern</h3>
+          <p class="meta">Koror, Palau · May – July 2026</p>
+          <ul class="skills"><li>Power BI</li><li>Microsoft Access</li><li>Data Systems</li><li>Human-Centered Design</li><li>Cross-Cultural Collaboration</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/yomi.jpg" alt="Neocis Yomi robotic dental surgery system">
+            <div class="cover-title">Neocis</div>
+            <div class="overlay"><p>Redesigned oral fiducials to accommodate an oxygen mask, balancing DFMA and aesthetics, and created and tested fixtures to precisely place beads in pockets.</p></div>
+          </div>
+          <h3>Neocis: Surgical Instruments Intern</h3>
+          <p class="meta">Miami, FL · June – August 2025</p>
+          <ul class="skills"><li>SolidWorks</li><li>3D Printing</li><li>DFMA</li><li>Human Factors</li><li>Human-Centered Design</li><li>User Testing</li><li>Injection Molding</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/sn-robotics.jpg" alt="Sruti presenting her Smith and Nephew poster, Testing Fixtures for Shoulder Applications">
+            <div class="cover-title">Smith and Nephew</div>
+            <div class="overlay"><p>Designed and tested bone pins using bone simulations in SolidWorks to find the design with the least compressive stress, and ran compression and deflection tests to optimize pin placement for shoulder procedures.</p></div>
+          </div>
+          <h3>Smith and Nephew: Robotics Intern</h3>
+          <p class="meta">Pittsburgh, PA · June – August 2024</p>
+          <ul class="skills"><li>SolidWorks</li><li>Simulation</li><li>Mechanical Testing</li><li>Medical Devices</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/sn-manufacturing.jpg" alt="Knee replacement implant">
+            <div class="cover-title">Smith and Nephew</div>
+            <div class="overlay"><p>Programmed 135 zirconium oxide knee and hip implants in VEI software to validate part size and family, and wrote VRA documentation and work instructions to introduce the new VEI vision software to the clean room.</p></div>
+          </div>
+          <h3>Smith and Nephew: Manufacturing Engineering Intern</h3>
+          <p class="meta">Memphis, TN · June – August 2023</p>
+          <ul class="skills"><li>VEI Vision Software</li><li>Validation</li><li>Technical Documentation</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/caterpillar.jpg?v=2" alt="Sruti standing on a Caterpillar 775G haul truck">
+            <div class="cover-title">Caterpillar</div>
+            <div class="overlay"><p>Wrote NI DIAdem scripts to analyze and visualize engine data for customer-facing materials, and automated daily tests on a dual-fuel engine to check engine health and diagnose turbine efficiency issues.</p></div>
+          </div>
+          <h3>Caterpillar: R&amp;D Engineering Intern</h3>
+          <p class="meta">Peoria, IL · June – August 2022</p>
+          <ul class="skills"><li>NI DIAdem</li><li>Data Analysis</li><li>Test Automation</li></ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Academic ===== -->
+    <section class="project-group" id="academic">
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/spinetorquecover.png" alt="Torque measuring adapter">
+            <div class="cover-title">Torque Measuring Adapter</div>
+            <div class="overlay"><p>Biomedical Engineering capstone sponsored by Medtronic: designed and manufactured a biocompatible adapter that measures the torque applied by spinal surgical instruments.</p></div>
+          </div>
+          <h3>Torque Measuring Adapter for Spinal Surgical Instruments</h3>
+          <p class="meta">Capstone, sponsored by Medtronic · September 2023 – May 2024</p>
+          <a class="poster-link" href="posters/torqueposter.pdf" target="_blank" rel="noopener">View poster &rarr;</a>
+          <ul class="skills"><li>Medical Device Design</li><li>Biocompatible Materials</li><li>Manufacturing</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/precisespicecover.jpg" alt="Spice container">
+            <div class="cover-title">Spice Container</div>
+            <div class="overlay"><p>A spice-jar-sized container that measures and dispenses ¼ tsp to 1 tbsp in one press. I designed the lead-screw and belt-and-pulley dispensing mechanism and toleranced it to fit the tight form factor.</p></div>
+          </div>
+          <h3>Spice Container with Integrated Measuring System</h3>
+          <p class="meta">September – December 2025</p>
+          <a class="poster-link" href="posters/precisespiceposter.pdf" target="_blank" rel="noopener">View poster &rarr;</a>
+          <ul class="skills"><li>SolidWorks</li><li>Mechanism Design</li><li>Tolerancing</li><li>Prototyping</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/music-matlab.jpg" alt="Fourier transform plot above sheet music generated from a recording">
+            <div class="cover-title">Music MATLAB</div>
+            <div class="overlay"><p>A MATLAB pipeline that turns an audio recording into sheet music. A fast Fourier transform finds the dominant frequency in each 0.05&nbsp;s slice, which is matched to one of 108 notes and plotted on a staff.</p></div>
+          </div>
+          <h3>Music MATLAB</h3>
+          <p class="meta">January – May 2024</p>
+          <ul class="skills"><li>MATLAB</li><li>Fourier Analysis</li><li>Signal Processing</li></ul>
+        </article>
+
+        <article class="project-card" hidden>
+          <div class="project-cover">
+            <!-- EDIT: replace with your music box photo -->
+            <img src="images/placeholder.svg" alt="Music box">
+            <div class="cover-title">Music Box</div>
+            <div class="overlay"><p>A working music box built from scratch. I tuned each comb tine with cantilever-beam vibration theory, fitting pitch against tine length across several comb prototypes, then mapped a song onto the drum's pin layout.</p></div>
+          </div>
+          <h3>Music Box</h3>
+          <p class="meta">January – May 2025</p>
+          <ul class="skills"><li>Vibration Analysis</li><li>Prototyping</li><li>MATLAB</li></ul>
+        </article>
+        <article class="project-card">
+          <div class="project-cover">
+            <img src="images/comm-design.gif?v=2" alt="Slideshow of an 8-page magazine layout, a type poster, and a recipe card">
+            <div class="cover-title">Communication Design</div>
+            <div class="overlay"><p>Three print pieces designed in Adobe Illustrator: an eight-page magazine feature inspired by <em>Wired</em>, a poster for an original display typeface, and an illustrated recipe card.</p></div>
+          </div>
+          <h3>Explorations in Communication Design</h3>
+          <p class="meta">January – May 2026</p>
+          <ul class="skills"><li>Adobe Illustrator</li><li>Communication Design</li></ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Fun Fabrication (gallery) =====
+      EDIT: one <figure class="fab-item"> per image.
+        - img src: your photo (any shape works; the gallery keeps each image's proportions)
+        - figcaption: the piece's name
+        - .skills: shown under the image on hover
+    -->
+    <section class="project-group" id="fun-fabrication">
+      <div class="fab-gallery">
+
+        <figure class="fab-item" tabindex="0">
+          <img src="images/fab/walnut-frame.jpg" alt="Walnut photo frame holding pressed flowers">
+          <figcaption>Walnut Photo Frame</figcaption>
+          <ul class="skills"><li>Jointing &amp; Planing</li><li>Routing</li><li>Finishing</li></ul>
+        </figure>
+
+        <figure class="fab-item" tabindex="0">
+          <img src="images/fab/bananagrams.jpg?v=2" alt="Laser-engraved wooden Bananagrams letter tiles">
+          <figcaption>Bananagrams</figcaption>
+          <ul class="skills"><li>Laser Cutting</li><li>Laser Engraving</li></ul>
+        </figure>
+
+        <figure class="fab-item" tabindex="0" hidden>
+          <img src="images/placeholder.svg" alt="Fabrication piece 2">
+          <figcaption class="placeholder-text">[Piece name]</figcaption>
+          <ul class="skills"><li>Skill 1</li><li>Skill 2</li><li>Skill 3</li></ul>
+        </figure>
+
+        <figure class="fab-item" tabindex="0" hidden>
+          <img src="images/placeholder.svg" alt="Fabrication piece 3">
+          <figcaption class="placeholder-text">[Piece name]</figcaption>
+          <ul class="skills"><li>Skill 1</li><li>Skill 2</li><li>Skill 3</li></ul>
+        </figure>
+
+        <figure class="fab-item" tabindex="0" hidden>
+          <img src="images/placeholder.svg" alt="Fabrication piece 4">
+          <figcaption class="placeholder-text">[Piece name]</figcaption>
+          <ul class="skills"><li>Skill 1</li><li>Skill 2</li><li>Skill 3</li></ul>
+        </figure>
+
+        <figure class="fab-item" tabindex="0" hidden>
+          <img src="images/placeholder.svg" alt="Fabrication piece 5">
+          <figcaption class="placeholder-text">[Piece name]</figcaption>
+          <ul class="skills"><li>Skill 1</li><li>Skill 2</li><li>Skill 3</li></ul>
+        </figure>
+
+        <figure class="fab-item" tabindex="0" hidden>
+          <img src="images/placeholder.svg" alt="Fabrication piece 6">
+          <figcaption class="placeholder-text">[Piece name]</figcaption>
+          <ul class="skills"><li>Skill 1</li><li>Skill 2</li><li>Skill 3</li></ul>
+        </figure>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Sruti Bapatla</footer>
+  <script src="script.js?v=2"></script>
+</body>
+</html>

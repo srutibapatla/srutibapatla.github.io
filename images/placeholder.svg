@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#dcebf5"/>
+  <g fill="none" stroke="#7AAACE" stroke-width="10" stroke-linejoin="round">
+    <rect x="300" y="210" width="200" height="150" rx="12"/>
+    <polyline points="310,350 370,285 420,330 450,300 490,350"/>
+  </g>
+  <circle cx="455" cy="250" r="16" fill="#7AAACE"/>
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="34" fill="#355872" text-anchor="middle">Filler Picture</text>
+</svg>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Neocis | Sruti Bapatla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="index.html">Sruti Bapatla</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="volunteering.html">Volunteering</a></li>
+    </ul>
+  </nav>
+
+  <!--
+    This page's content is encrypted in neocis.enc.
+    To edit it: change private-src/neocis-content.html (or its images), then run
+      pwsh private-src/build-neocis.ps1 -Password "<password>"
+  -->
+  <main class="post" id="post">
+    <a class="back-link" href="projects.html#featured">&larr; Back to projects</a>
+
+    <section class="lock-card">
+      <p class="post-kicker">Featured Project · Neocis Surgical Instruments Intern</p>
+      <h1>Splint Redesign for Bagging Compatibility</h1>
+      <p>This project is password protected. Enter the password to view the design story.</p>
+      <form id="unlock-form" class="lock-form">
+        <label for="pw" class="visually-hidden">Password</label>
+        <input id="pw" type="password" placeholder="Password" autocomplete="current-password" required>
+        <button class="btn primary" type="submit">Unlock</button>
+      </form>
+      <p id="lock-msg" class="lock-msg" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>© 2026 Sruti Bapatla</footer>
+
+  <script>
+    (() => {
+      const form = document.getElementById("unlock-form");
+      const input = document.getElementById("pw");
+      const msg = document.getElementById("lock-msg");
+      const post = document.getElementById("post");
+      const KEY = "neocis-pw";
+      let encrypted = null;
+
+      async function decrypt(password) {
+        if (!encrypted) {
+          const res = await fetch("neocis.enc", { cache: "no-cache" });
+          if (!res.ok) throw new Error("load");
+          encrypted = new Uint8Array(await res.arrayBuffer());
+        }
+        const salt = encrypted.slice(0, 16);
+        const iv = encrypted.slice(16, 28);
+        const data = encrypted.slice(28);
+        const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]);
+        const key = await crypto.subtle.deriveKey(
+          { name: "PBKDF2", salt, iterations: 300000, hash: "SHA-256" },
+          base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+        const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, data);
+        return new TextDecoder().decode(plain);
+      }
+
+      async function unlock(password, remember) {
+        msg.textContent = "Unlocking…";
+        try {
+          post.innerHTML = await decrypt(password);
+          if (remember) { try { sessionStorage.setItem(KEY, password); } catch (e) {} }
+          window.scrollTo(0, 0);
+        } catch (e) {
+          msg.textContent = e.message === "load"
+            ? "Couldn't load the project. Please try again."
+            : "That password isn't right.";
+          try { sessionStorage.removeItem(KEY); } catch (e2) {}
+          input.select();
+        }
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        unlock(input.value, true);
+      });
+
+      // Stay unlocked across reloads in the same browser tab.
+      let saved = null;
+      try { saved = sessionStorage.getItem(KEY); } catch (e) {}
+      if (saved) unlock(saved, false);
+    })();
+  </script>
+</body>
+</html>
