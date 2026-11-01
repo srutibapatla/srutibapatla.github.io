@@ -316,6 +316,8 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
   transition: opacity 0.3s;
 }
 
+.logo-card img.photo { object-fit: cover; padding: 0; }
+
 .logo-card .overlay {
   position: absolute;
   inset: 0;
