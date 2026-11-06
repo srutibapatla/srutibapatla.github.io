@@ -369,7 +369,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
 
 /* Featured: two larger cards, centered */
 .project-grid.featured-grid {
-  grid-template-columns: repeat(2, minmax(0, 440px));
+  grid-template-columns: repeat(auto-fit, minmax(0, 440px));   /* centers however many featured cards are shown */
   justify-content: center;
   gap: 40px;
 }
