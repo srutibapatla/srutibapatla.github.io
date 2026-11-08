@@ -233,6 +233,9 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
   transition: opacity 0.3s;
 }
 
+/* stack paragraphs; scroll if a long description doesn't fit */
+.project-cover .overlay { flex-direction: column; gap: 8px; justify-content: safe center; overflow-y: auto; }
+.project-cover .overlay:has(p + p) { font-size: 0.78rem; line-height: 1.36; padding: 10px 14px; }
 .project-cover:hover img { opacity: 0.2; }
 .project-cover:hover .cover-title { opacity: 0; }
 .project-cover:hover .overlay { opacity: 1; }
