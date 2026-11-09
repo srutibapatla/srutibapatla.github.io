@@ -248,6 +248,22 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
 }
 
 /* ===== Teaching ===== */
+/* Teaching: photo beside the top section */
+.teach-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.side-photo { margin: 0; }
+.side-photo img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+.side-photo figcaption { margin-top: 8px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 800px) {
+  .teach-top { grid-template-columns: 1fr; gap: 24px; }
+}
+
 .hover-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
