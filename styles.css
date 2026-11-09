@@ -23,6 +23,7 @@
   /* Swap these two if you'd rather have the fonts the other way round */
   --font-heading: "Bungee", "Roboto", sans-serif;
   --font-body: "Roboto", -apple-system, "Segoe UI", sans-serif;
+  --font-sub: "Rubik", "Roboto", sans-serif; /* bold, easier-to-read middle font for smaller headings */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,9 +38,14 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, .site-nav a, .cover-title, .btn, .logo-name {
+h1, h2 {
   font-family: var(--font-heading);
   font-weight: 400; /* Bungee has a single weight; this avoids fake bolding */
+}
+
+h3, h4, .site-nav a, .cover-title, .btn, .logo-name {
+  font-family: var(--font-sub);
+  font-weight: 600;
 }
 
 h1, h2 { color: var(--navy); }
@@ -344,7 +350,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
 .poster-link {
   display: inline-block;
   margin-top: 6px;
-  font-family: var(--font-heading);
+  font-family: var(--font-sub);
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
@@ -397,7 +403,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
 .fab-item figcaption {
   padding: 10px 14px 12px;
   color: var(--cream);
-  font-family: var(--font-heading);
+  font-family: var(--font-sub);
   font-weight: 600;
 }
 
@@ -432,7 +438,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
 .back-link {
   display: inline-block;
   margin-bottom: 28px;
-  font-family: var(--font-heading);
+  font-family: var(--font-sub);
   font-weight: 600;
   text-decoration: none;
 }
@@ -502,7 +508,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
   gap: 4px;
 }
 
-.stat-num { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--navy); }
+.stat-num { font-family: var(--font-sub); font-weight: 700; font-size: 1.25rem; color: var(--navy); }
 .stat-label { font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
 
 /* Worked calculation */
@@ -656,7 +662,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
   gap: 18px;
 }
 
-.pros-cons h4 { font-family: var(--font-heading); color: var(--steel); margin-bottom: 4px; }
+.pros-cons h4 { font-family: var(--font-sub); color: var(--steel); margin-bottom: 4px; }
 
 /* Table */
 .post-table {
@@ -670,7 +676,7 @@ h3 { font-size: 1.15rem; margin-bottom: 6px; }
 }
 
 .post-table th, .post-table td { padding: 10px 12px; text-align: center; border-bottom: 1px solid var(--border); }
-.post-table th { background: var(--navy); color: var(--cream); font-family: var(--font-heading); font-weight: 600; }
+.post-table th { background: var(--navy); color: var(--cream); font-family: var(--font-sub); font-weight: 600; }
 .post-table td:first-child { font-weight: 600; text-align: left; }
 
 /* Quote */
