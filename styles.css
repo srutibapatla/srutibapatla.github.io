@@ -23,7 +23,7 @@
   /* Swap these two if you'd rather have the fonts the other way round */
   --font-heading: "Bungee", "Roboto", sans-serif;
   --font-body: "Roboto", -apple-system, "Segoe UI", sans-serif;
-  --font-sub: "Saira Semi Condensed", "Roboto", sans-serif; /* blocky all-caps middle font for smaller headings */
+  --font-sub: "Oswald", "Roboto", sans-serif; /* blocky all-caps middle font for smaller headings */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
