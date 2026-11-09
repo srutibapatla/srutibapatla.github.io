@@ -1,23 +1,5 @@
 /* ===== Fonts =====
-   Put the font files in the fonts/ folder with these names
-   (.woff2 preferred; .otf/.ttf also listed as backups). */
-@font-face {
-  font-family: "Wassmer Reglet";
-  src: local("Wassmer Reglet"),
-       url("fonts/WassmerReglet.woff2") format("woff2"),
-       url("fonts/WassmerReglet.otf") format("opentype"),
-       url("fonts/WassmerReglet.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Zugili";
-  src: local("Zugili"),
-       url("fonts/Zugili.woff2") format("woff2"),
-       url("fonts/Zugili.otf") format("opentype"),
-       url("fonts/Zugili.ttf") format("truetype");
-  font-display: swap;
-}
+   Bungee (headings) and Roboto (body) load from Google Fonts in each page's <head>. */
 
 /* ===== Base ===== */
 :root {
@@ -39,8 +21,8 @@
   --shadow: 0 2px 10px rgba(53, 88, 114, 0.08);
 
   /* Swap these two if you'd rather have the fonts the other way round */
-  --font-heading: "Wassmer Reglet", "Inter", Georgia, serif;
-  --font-body: "Zugili", "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Bungee", "Roboto", sans-serif;
+  --font-body: "Roboto", -apple-system, "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -57,6 +39,7 @@ body {
 
 h1, h2, h3, .site-nav a, .cover-title, .btn, .logo-name {
   font-family: var(--font-heading);
+  font-weight: 400; /* Bungee has a single weight; this avoids fake bolding */
 }
 
 h1, h2 { color: var(--navy); }
